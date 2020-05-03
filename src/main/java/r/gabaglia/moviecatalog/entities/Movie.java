@@ -24,7 +24,7 @@ public class Movie implements Serializable{
 	*/
 	public Movie() {}
 
-	public Movie(String title, Date year, String director/*, List<Protagonist> cast*/) {
+	public Movie(String title, Date year, String director) {
 		this.title = title;
 		this.year = year;
 		this.director = director;

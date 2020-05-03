@@ -8,20 +8,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Protagonist implements Serializable{
+public class Rate implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private String name;
+	private int rate;
 	
 	//private List<Movie> movies = new ArrayList<>();
 	
-	public Protagonist() {}
+	public Rate() {}
 
-	public Protagonist(String name) {
-		this.name = name;
+	public Rate(int rate) {
+		this.rate = rate;
 	}
 
 	public int getId() {
@@ -32,12 +32,12 @@ public class Protagonist implements Serializable{
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public int getRate() {
+		return rate;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setRate(int rate) {
+		this.rate = rate;
 	}
 
 	/*public List<Movie> getMovies() {
@@ -64,13 +64,11 @@ public class Protagonist implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Protagonist other = (Protagonist) obj;
+		Rate other = (Rate) obj;
 		if (id != other.id)
 			return false;
 		return true;
 	}
-	
-	
 	
 	
 	
